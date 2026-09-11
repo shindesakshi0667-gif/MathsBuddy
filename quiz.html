@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MathsBuddy - Quiz</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+ <div class="topbar-inner">
+    <a class="topbar-brand" href="dashboard.html"><span class="brand-logo small">ðŸ§®</span> MathsBuddy</a>
+    <div class="topbar-right">
+      <span id="quiz-topic-badge" class="student-badge"></span>
+      <button id="logout-button" class="btn btn-ghost btn-sm">Log out</button>
+    </div>
+ </div>
+</header>
+
+<main class="page narrow">
+
+ <section id="quiz-picker" class="panel hidden">
+    <h1>Pick a topic to practise</h1>
+    <p class="subtitle" id="picker-sub"></p>
+    <div id="picker-grid" class="quiz-grid"></div>
+ </section>
+
+ <section id="quiz-screen" class="panel hidden">
+    <div class="quiz-topbar">
+      <span class="pill" id="q-counter"></span>
+      <span class="pill" id="q-score">Score: 0</span>
+      <span class="pill streak" id="q-streak">ðŸ”¥ Streak: 0</span>
+      <span class="pill" id="q-timer">â± 00:00</span>
+      <span class="pill" id="q-progress-label"></span>
+    </div>
+    <div class="progress-track"><div id="progress-fill" class="progress-fill"></div></div>
+    <h2 id="q-text" class="q-text"></h2>
+    <p id="combo-banner" class="combo-banner hidden"></p>
+    <div id="q-options" class="option-list"></div>
+    <p id="q-feedback" class="feedback" aria-live="polite"></p>
+    <div class="cta-row end">
+      <button id="hint-button" class="btn btn-ghost">ðŸ’¡ Hint</button>
+      <button id="next-button" class="btn btn-primary" disabled>Next</button>
+    </div>
+ </section>
+
+ <section id="quiz-result" class="panel hidden">
+    <div class="result-emoji" id="result-emoji">ðŸŽ‰</div>
+    <h1 id="result-title">Quiz complete!</h1>
+    <p id="result-message" class="subtitle"></p>
+    <div id="badge-row" class="badge-row"></div>
+    <div id="result-stats" class="stat-row"></div>
+    <div class="cta-row end">
+      <button id="retry-button" class="btn btn-ghost">Try again</button>
+      <a class="btn btn-primary" href="dashboard.html">Back to home</a>
+    </div>
+ </section>
+
+</main>
+
+<script src="js/storage.js"></script>
+<script src="js/data.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/quiz.js"></script>
+</body>
+</html>

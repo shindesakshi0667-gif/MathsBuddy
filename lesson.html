@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MathsBuddy - Lesson</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+ <div class="topbar-inner">
+    <a class="topbar-brand" href="dashboard.html"><span class="brand-logo small">🧮</span> MathsBuddy</a>
+    <div class="topbar-right">
+      <button id="ai-help-button" class="btn btn-ghost btn-sm">🤖 Ask AI about this</button>
+      <button id="logout-button" class="btn btn-ghost btn-sm">Log out</button>
+    </div>
+ </div>
+</header>
+
+<main class="page narrow">
+ <a class="back-link" href="dashboard.html">← Back to topics</a>
+
+ <article class="panel lesson-panel">
+    <p class="bcrumb" id="lesson-class"></p>
+    <h1 id="lesson-title"></h1>
+    <div id="lesson-body" class="lesson-body"></div>
+ </article>
+
+ <section class="panel ai-inline hidden" id="ai-inline-panel">
+    <div class="panel-head"><h2>🤖 AI Maths Buddy</h2>
+      <button id="close-ai" class="btn btn-ghost btn-sm">Close</button>
+    </div>
+    <div id="chat-window" class="chat-window small"></div>
+    <form id="chat-form" class="chat-form" autocomplete="off">
+      <input id="chat-input" type="text" placeholder="Ask about this lesson..." maxlength="200">
+      <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+ </section>
+
+ <div class="cta-row">
+    <a id="quiz-link" class="btn btn-primary btn-lg">Take the quiz →</a>
+    <button id="next-topic" class="btn btn-ghost btn-lg">Next topic</button>
+ </div>
+</main>
+
+<script src="js/storage.js"></script>
+<script src="js/data.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/lesson.js"></script>
+</body>
+</html>
