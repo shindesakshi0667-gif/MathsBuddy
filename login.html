@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MathsBuddy - Login</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-body">
+
+<div class="login-wrapper">
+ <div class="login-card">
+    <div class="brand">
+      <span class="brand-logo">🧮</span>
+      <h1>MathsBuddy</h1>
+      <p class="brand-sub">Fun maths for Class 1 to 5</p>
+    </div>
+
+    <form id="login-form" autocomplete="off">
+      <label for="student-name">Your name</label>
+      <input id="student-name" type="text" placeholder="e.g. Aarav" maxlength="30" required>
+
+      <label for="student-class">Your class</label>
+      <select id="student-class" required>
+        <option value="">Choose your class</option>
+        <option value="1">Class 1</option>
+        <option value="2">Class 2</option>
+        <option value="3">Class 3</option>
+        <option value="4">Class 4</option>
+        <option value="5">Class 5</option>
+      </select>
+
+      <label for="student-pin">Secret PIN (4 digits)</label>
+      <input id="student-pin" type="password" inputmode="numeric" placeholder="••••" maxlength="4" required>
+
+      <p id="login-error" class="error-text"></p>
+
+      <button type="submit" class="btn btn-primary btn-block">Start learning 🚀</button>
+    </form>
+
+    <div id="returning-users" class="returning hidden">
+      <p class="returning-title">Or continue as a saved learner</p>
+      <div id="user-chips" class="user-chips"></div>
+    </div>
+ </div>
+
+ <p class="login-footer">New here? Just type your name, pick your class and a 4-digit PIN. We save your progress on this device.</p>
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>
